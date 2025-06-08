@@ -1,4 +1,4 @@
-package conexion;
+package conexion; //paquete donde esta unicada la conexion a la base de datos
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,25 +7,26 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ConexionBD {
-    
-public static Connection conectar() {
-try {
-String url = "jdbc:mysql://localhost:3306/login";
-String user = "root";
-String pass = "";
-Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-Connection con = DriverManager.getConnection(url, user, pass);
-System.out.println("Conexión exitosa.");
-return con;
-} catch (SQLException e) {
-System.out.println("Error al conectar con la base de datos: " + e.getMessage());
-return null;
-} catch (ClassNotFoundException ex) {
-Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
-} catch (InstantiationException ex) {
-Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
-} catch (IllegalAccessException ex) {
-Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
-}return null;
-}
+
+    public static Connection conectar() {
+        try {
+            String url = "jdbc:mysql://localhost:3306/Login";
+            String user = "maria";
+            String pass = "Maria1991#";
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();// indica a que bd se va a conectar
+            Connection con = DriverManager.getConnection(url, user, pass);
+            System.out.println("Conexión exitosa.");
+            return con;
+        } catch (SQLException e) {
+            System.out.println("Error al conectar con la base de datos: " + e.getMessage());
+            return null;
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 }

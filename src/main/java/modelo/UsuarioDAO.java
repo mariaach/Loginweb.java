@@ -18,8 +18,8 @@ public class UsuarioDAO {
 
         String sql = "INSERT INTO usuarios (nombre, telefono, direccion, usuario, clave) VALUES (?, ?, ?, ?, ?)";
 
-        try (PreparedStatement stmt = con.prepareStatement(sql)) {
-            stmt.setString(1, usuario.getNombre());
+        try (PreparedStatement stmt = con.prepareStatement(sql)) { //permite inyectar sql y hace dinamico
+            stmt.setString(1, usuario.getNombre()); 
             stmt.setString(2, usuario.getTelefono());
             stmt.setString(3, usuario.getDireccion());
             stmt.setString(4, usuario.getUsuario());
@@ -28,7 +28,7 @@ public class UsuarioDAO {
             int filas = stmt.executeUpdate();
             System.out.println("Registro insertado. Filas afectadas: " + filas);
             return filas > 0;
-
+             // si sale un error pasa al catch y entrega el mesaje
         } catch (SQLException e) {
             System.out.println("Error al ejecutar INSERT en UsuarioDAO: " + e.getMessage());
             return false;
@@ -36,7 +36,7 @@ public class UsuarioDAO {
     }
 
     public boolean validarLogin(String usuario, String clave) {
-        Connection con = ConexionBD.conectar();
+        Connection con = ConexionBD.conectar();// abre la conexion
         if (con == null) {
             System.out.println("No se pudo establecer conexión al validar login.");
             return false;
