@@ -1,6 +1,5 @@
 conexion/ConexionBD.class
 modelo/UsuarioDAO.class
 modelo/Usuario.class
-controlador/LogoutServlet.class
 controlador/LoginServlet.class
 controlador/RegistroServlet.class

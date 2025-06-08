@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tomcat:
+    image: tomcat:11-jdk21
+    container_name: tomcat11
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./webapps:/usr/local/tomcat/webapps
+    environment:
+      - TZ=America/Bogota
