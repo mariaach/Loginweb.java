@@ -2,11 +2,33 @@ version: '3.8'
 
 services:
   tomcat:
-    image: tomcat:11-jdk21
-    container_name: tomcat11
+    image: tomcat:9.0-jdk21
+    container_name: tomcat9
+    restart: always
     ports:
       - "8080:8080"
     volumes:
       - ./webapps:/usr/local/tomcat/webapps
     environment:
       - TZ=America/Bogota
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8
+    restart: always
+    container_name: mysql8
+    environment:
+      MYSQL_DATABASE: usuarios
+      MYSQL_USER: maria
+      MYSQL_PASSWORD: Maria1991#
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+networks:
+  default:
+    external:
+      name: hostnet

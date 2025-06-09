@@ -14,7 +14,7 @@
   >
     <div class="card p-4 shadow" style="width: 30rem">
       <h3 class="text-center mb-3">Registrar Usuario</h3>
-      <form action="RegistroServlet" method="post">
+      <form action="/LoginWeb/RegistroServlet" method="post">
         <div class="mb-3">
           <label class="form-label">Nombre</label>
           <input type="text" name="nombre" class="form-control" required />

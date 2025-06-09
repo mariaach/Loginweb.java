@@ -10,7 +10,8 @@ public class ConexionBD {
 
     public static Connection conectar() {
         try {
-            String url = "jdbc:mysql://localhost:3306/Login";
+            //String url = "jdbc:mysql://localhost:3306/usuarios";
+            String url = "jdbc:mysql://mysql:3306/usuarios";
             String user = "maria";
             String pass = "Maria1991#";
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();// indica a que bd se va a conectar
