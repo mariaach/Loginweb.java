@@ -1,4 +1,4 @@
-package conexion; //paquete donde esta unicada la conexion a la base de datos
+package conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,8 +9,8 @@ import java.util.logging.Logger;
 public class ConexionBD {
 
     public static Connection conectar() {
+
         try {
-            //String url = "jdbc:mysql://localhost:3306/usuarios";
             String url = "jdbc:mysql://mysql:3306/usuarios";
             String user = "maria";
             String pass = "Maria1991#";
@@ -31,3 +31,9 @@ public class ConexionBD {
         return null;
     }
 }
+
+/*Este método:
+Intenta conectarse a una base de datos MySQL.
+Usa JDBC.
+Devuelve una conexión si tiene éxito o null si ocurre un error.
+Registra errores con Logger y también muestra algunos mensajes en consola.*/

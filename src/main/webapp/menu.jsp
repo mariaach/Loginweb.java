@@ -9,6 +9,6 @@ response.sendRedirect("login.jsp"); } %>
   </head>
   <body>
     <h1>Aplicación Login Web ADSO Funcionando!</h1>
-    <p>¡Bienvenido, usuario!</p>
+    <p>¡Bienvenido usuario!</p>
   </body>
 </html>

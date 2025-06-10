@@ -5,7 +5,10 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.loginweb</groupId>
+  <!-- Estas líneas le dicen a Maven
+   cómo se llama tu proyecto, de qué tipo es, quién lo desarrolla, y qué versión tiene.-->
+   
+  <groupId>com.loginweb</groupId> 
   <artifactId>LoginWeb</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -21,7 +24,9 @@
       <!-- No necesitas el scope test si es para producción -->
     </dependency>
 
-    <!-- Servlet API (solo si usas servlets en tu proyecto) -->
+    <!-- Tecnologías Java para aplicaciones web  Servlet API actua como controlador 
+     recibe las solicitudes del usuario, decide qué hacer y a qué vista mostrar-->
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -29,7 +34,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- JSTL (si usas JSP con etiquetas JSTL) -->
+    <!-- JSTL  Como se vé el proyecto -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>

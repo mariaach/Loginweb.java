@@ -39,3 +39,10 @@ public class RegistroServlet extends HttpServlet {
         }
     }
 }
+
+/*Recoge los datos del formulario (nombre, teléfono, dirección, usuario, clave).
+Crea un objeto Usuario con esos datos.
+Llama al método registrar() del UsuarioDAO, que intenta guardar ese usuario en la base de datos.
+Dependiendo del resultado:
+✅ Si el registro es exitoso, redirige a login.jsp?registrado=1.
+❌ Si falla, redirige a registro.jsp?error=mensaje. */

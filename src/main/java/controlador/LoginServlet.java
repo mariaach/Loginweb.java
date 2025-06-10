@@ -27,3 +27,9 @@ public class LoginServlet extends HttpServlet {
         }
     }
 }
+
+/*Este servlet hace lo siguiente:
+Recibe los datos del formulario (usuario y clave).
+Llama al DAO para verificar si son válidos.
+Si son correctos, crea una sesión y redirige a menu.jsp.
+Si son incorrectos, vuelve a login.jsp con un mensaje de error. */

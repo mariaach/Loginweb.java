@@ -59,3 +59,5 @@ public class UsuarioDAO {
         }
     }
 }
+/*Usa una clase llamada ConexionBD para conectarse a la base de datos.
+Ambos métodos muestran mensajes en consola para facilitar el seguimiento y detección de errores. */
