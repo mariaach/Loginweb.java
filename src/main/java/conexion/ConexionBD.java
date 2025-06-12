@@ -31,9 +31,3 @@ public class ConexionBD {
         return null;
     }
 }
-
-/*Este método:
-Intenta conectarse a una base de datos MySQL.
-Usa JDBC.
-Devuelve una conexión si tiene éxito o null si ocurre un error.
-Registra errores con Logger y también muestra algunos mensajes en consola.*/

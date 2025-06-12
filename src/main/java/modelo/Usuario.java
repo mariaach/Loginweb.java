@@ -30,20 +30,3 @@ public String getClave() {
 return clave;
 }
 }
-
-/*Atributos privados:
-nombre: nombre del usuario
-telefono: número de teléfono
-direccion: dirección del usuario
-usuario: nombre de usuario (login)
-clave: contraseña
-Constructores:
-Un constructor vacío (Usuario()): necesario para algunas herramientas o frameworks.
-Un constructor con parámetros: permite crear un objeto con todos los datos desde el principio.
-Métodos getters (como getNombre(), getUsuario(), etc.):
-Permiten acceder a los valores de los atributos desde otras clases.
-📌 ¿Para qué sirve esta clase?
-Sirve para transportar datos del usuario dentro del sistema, por ejemplo:
-Desde el formulario de registro hasta el DAO.
-Desde la base de datos hacia el servlet.
-Para mostrar datos del usuario en una página JSP. */

@@ -16,12 +16,10 @@
   <url>http://maven.apache.org</url>
 
   <dependencies>
-    <!-- MySQL JDBC Connector -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.33</version> <!-- Cambia por la versión que prefieras -->
-      <!-- No necesitas el scope test si es para producción -->
+      <version>8.0.33</version>
     </dependency>
 
     <!-- Tecnologías Java para aplicaciones web  Servlet API actua como controlador 
